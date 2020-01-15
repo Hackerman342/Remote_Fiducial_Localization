@@ -13,8 +13,8 @@
   
   <!-- Robot localization-->
   <node pkg="robot_localization" type="ekf_localization_node" name="ekf_se" clear_params="true">
-    <!-- <rosparam command="load" file="$(find svea_sensors)/params/robot_localization/ekf_with_logicam_aruco.yaml" /> -->
     <rosparam command="load" file="$(find svea_sensors)/params/robot_localization/ekf_imu_ctrl_only.yaml" />
+    <!-- <rosparam command="load" file="$(find svea_sensors)/params/robot_localization/ekf_with_logicam_aruco.yaml" /> -->
     <!--  Placeholder for output topic remapping
     <remap from="odometry/filtered" to=""/>
     <remap from="accel/filtered" to=""/>
