@@ -8,7 +8,7 @@ Completed as the final project for course EL 2320 - Applied Estimation at KTH Ro
 This project was completed with partners Akanshu Mahajan and Sharang Kaul.
 
 
-This project built off of the solutions for SLAM based on ArUco markers I was currently developing as a Research Engineer in the KTH Smart Mobility Lab.
+This project built off of the solutions for SLAM based on ArUco markers I was simultaneously developing as a Research Engineer in the KTH Smart Mobility Lab.
 All python nodes and launch files were developed specifically for this application, while yaml files were configured from templates.
 Results (plots, videos, & report) are included in project_results.
 

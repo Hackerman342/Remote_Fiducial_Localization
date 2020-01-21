@@ -22,33 +22,32 @@ class ArucoTF():
     def __init__(self):
         ## Pull necessary ROS parameters from launch file:
         # Read camera frame id
-        param1 = rospy.search_param("camera_frame")
-        self.cam_frame = rospy.get_param(param1)
+        param = rospy.search_param("camera_frame")
+        self.cam_frame = rospy.get_param(param)
         # Read fiducial pose topic parameter
-        param2 = rospy.search_param("fiducial_pose_topic")
-        self.fid_pose_topic = rospy.get_param(param2)
+        param = rospy.search_param("fiducial_pose_topic")
+        self.fid_pose_topic = rospy.get_param(param)
         # Read fiducial id value
-        param3 = rospy.search_param("fiducial_id")
-        self.fid_id = rospy.get_param(param3)
+        param = rospy.search_param("fiducial_id")
+        self.fid_id = rospy.get_param(param)
         # Read estimated vehicle pose frame_id and topic
-        param4 = rospy.search_param("est_vehicle_frame")
-        self.est_veh_pose_frame = rospy.get_param(param4)
-        param5 = rospy.search_param("map_pose_estimate_topic")
-        self.est_veh_pose_top = rospy.get_param(param5)
+        param = rospy.search_param("est_vehicle_frame")
+        self.est_veh_pose_frame = rospy.get_param(param)
+        param = rospy.search_param("map_pose_estimate_topic")
+        self.est_veh_pose_top = rospy.get_param(param)
         # Read map frame   
-        param6 = rospy.search_param("map_frame")
-        self.map_frame = rospy.get_param(param6)
+        param = rospy.search_param("map_frame")
+        self.map_frame = rospy.get_param(param)
         # Read covariance values
-        param7 = rospy.search_param("lin_cov_aruco")
-        self.lin_cov = rospy.get_param(param7)
-        param8 = rospy.search_param("ang_cov_aruco")
-        self.ang_cov = rospy.get_param(param8)
+        param = rospy.search_param("lin_cov_aruco")
+        self.lin_cov = rospy.get_param(param)
+        param = rospy.search_param("ang_cov_aruco")
+        self.ang_cov = rospy.get_param(param)
 
         # Initialize callback variables
         self.fid_pose = None
 
         # Initialize class variables
-        
 
         # Establish subscription to Fiducial Pose
         rospy.Subscriber(self.fid_pose_topic, FiducialTransformArray, self.fid_pose_callback)
